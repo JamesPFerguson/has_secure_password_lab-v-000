@@ -5,9 +5,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(name: params[:name])
+    @user = User.find_by(name: params[:user][:name])
     binding.pry
-    if @user.try(:authenticate, params[:password])
+    if @user.try(:authenticate, params[:user][:password])
       session[:user_id] = @user.id
       redirect_to home_path
     else
