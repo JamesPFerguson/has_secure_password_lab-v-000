@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :users
+get 'users/new'
+
+post 'users/create'
+
+get 'users/home'
 end
