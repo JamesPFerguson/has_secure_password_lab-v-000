@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def home
-
+    @user = user.find_by(name: session[:name])
   end
 
   def new
