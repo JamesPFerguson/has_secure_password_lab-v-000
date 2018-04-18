@@ -5,4 +5,6 @@ get 'users/new'
 post 'users/create'
 
 get 'users/home'
+
+post 'sessions/create'
 end
