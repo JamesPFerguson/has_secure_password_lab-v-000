@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(name: params[:name])
     if @user.nil?
-       redirect_to new_session_path
+       redirect_to login_path
      end
     return head(:forbidden) unless @user.authenticate(params[:password])
     session[:user_id] = @user.id
