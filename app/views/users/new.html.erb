@@ -1,6 +1,6 @@
-<%= form_for(@user) do |f| %>
-  Username: <%= f.text_field :name %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
-<% end %>
+<%= form_tag login_path %>
+<%= label_tag :name, "User name:" %>
+<%= text_field_tag :name %><br>
+<%= label_tag :password, "Password:" %>
+<%= password_field_tag :password %><br>
+<%= submit_tag "Log In" %>
